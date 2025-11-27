@@ -2,74 +2,70 @@
 .parent {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* trái – giữa – phải */
-  grid-template-rows: auto auto 1fr auto;
-  gap: 8px;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
 }
 
-/* Header */
+/* --- HEADER (Ảnh + marquee) --- */
 .div1 {
-  grid-column: 1 / 4; /* spanning 3 columns */
+  grid-column: 1 / 4;
 }
 
-/* Menu */
+/* --- MENU NGANG --- */
 .div2 {
   grid-column: 1 / 4;
 }
 
-/* Cột trái */
+/* --- CỘT TRÁI (div3) --- */
 .div3 {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
   font-size: 15px;
 }
 
-.div3 img {
-  width: 140px;
-  height: 113px;
-}
-
-/* Nội dung chính (ở giữa) */
+/* --- NỘI DUNG CHÍNH (div4) --- */
 .div4 {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   font-size: 20px;
 }
 
-/* Cột phải */
+/* --- CỘT PHẢI (div5) --- */
 .div5 {
   grid-column: 3 / 4;
   grid-row: 3 / 4;
 }
 
-/* Footer */
+/* --- FOOTER (div6) --- */
 .div6 {
   grid-column: 1 / 4;
+  grid-row: 4 / 5;
 }
 
-/* MENU CHÍNH */
+/* --- MENU CHÍNH --- */
 .main {
   background: blue;
   display: flex;
   align-items: center;
-  gap: 35px;
-  padding: 12px 24px;
+  gap: 30px;
+  padding: 12px 20px;
   color: white;
   white-space: nowrap;
-  font-size: 21px;
+  font-size: 20px;
 }
 
+/* TỪNG ĐOẠN MENU */
 .d {
   position: relative;
   padding: 6px 12px;
   cursor: pointer;
 }
 
-/* Hover menu */
 .d:hover {
   background-color: darkred;
 }
 
-/* Dropdown */
+/* DROPDOWN */
 .d ul {
   list-style: none;
   position: absolute;
@@ -78,9 +74,9 @@
   top: 100%;
   left: 0;
   padding: 10px;
-  min-width: 160px;
   border-radius: 6px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .d:hover ul {
@@ -96,17 +92,15 @@
   background-color: rgb(239, 106, 106);
 }
 
-.gocnhin {
-  background-color: blue;
-  color: white;
-  font-size: 12px;
-}
-
-.hh {
-  font-weight: normal;
-}
-
+/* STYLE CỘT BÊN PHẢI */
 .indam {
   font-weight: bold;
   font-size: 20px;
 }
+
+/* ẢNH */
+.div3 img {
+  width: 140px;
+  height: 113px;
+}
+
